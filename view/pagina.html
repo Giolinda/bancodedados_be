@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+
+</head>
+
+<body onload="carregaPrestadores()">
+    <center>
+        <form method="POST" action="">
+
+            <fildset>
+                <legend>
+                    <h2> Prestadores de serviço</h2>
+                </legend>
+                <label>Nome:</label>
+                <input type="text" name="nome" id="nome" required />
+                <br>
+                <br>
+                <label>Telefone:</label>
+                <input type="text" name="telefone" id="telefone" required />
+                <br>
+                <br>
+                <label>Função:</label>
+                <input type="text" name="funcao" id="funcao" required minlength="1" maxlength="25" />
+                <br>
+                <br>
+                <input type="submit" id="btEnviar" value="Enviar" />
+                <input type="reset" id="btLimpar" value="Limpar" />
+            </fildset>
+
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">Gerenciar Pessoas</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <br>
+                    <th>Nome</th>
+                    <br>
+                    <th>Telefone</th>
+                    <br>
+                    <th>Funções</th>
+                </tr>
+            </thead>
+            <tbody id="bodyPessoas">
+            </tbody>
+        </table>
+
+        <form method="POST" action="">
+            <fildset>
+                <legend>
+                    <h2>Obras</h2>
+                </legend>
+                <label> Descrição</label><br />
+                <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+                <br>
+                <br>
+                <label>Data Inicial (prevista) </label>
+                <input type="date" name="data" id="data" required />
+                <br>
+                <br>
+                <label>Data Final (prevista) </label>
+                <input type="date" name="data" id="data" required />
+                <br>
+                <br>
+                <label> Quantidade de horas</label>
+                <input type="time" name="quantidade" id="quantidade" required />
+                <br>
+                <br>
+                <label>Valor total da obra : </label>
+                <input type="number" name="numero" id="numero" />
+                <br>
+                <br>
+                <input type="submit" id="btEnviar" value="Enviar" />
+                <input type="reset" id="btLimpar" value="Limpar" />
+            </fildset>
+        </form>
+    </center>
+    <script src="prestadores.js"></script>
+</body>
+
+</html>
